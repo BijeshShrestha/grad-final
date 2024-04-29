@@ -10,7 +10,7 @@ Final Project - Interactive Data Visualization Research
 ### Prospectus
 
     The prospectus is included in the repository as `Prospectus_VIS_Group_Project_AI_Charts.pdf` file in "docs_deliverables" folder.
-    
+
 ### Process Book 
     The process book is included in the repository as `CS573_Process_Book.pdf` file in "docs_deliverables" folder.
 
@@ -23,3 +23,23 @@ Final Project - Interactive Data Visualization Research
 ### Project Website
 
     The project website is hosted at https://bijeshshrestha.github.io/grad-final/
+
+
+# Instruction to run the project locally
+    - Clone the repository from https://github.com/BijeshShrestha/grad-final
+    - Navigate to the project directory
+    - Run the following command to create a virtual environment
+        **In Linux/Unix:**
+        - python3 -m venv CQA_venv
+        - source CQA_venv/bin/activate
+        - pip install -r requirements.txt
+        - rename .env.example to .env and update the openai api key and SAVE
+        - streamlit run webapp_demo.py
+        
+        **In Windows:**
+        - python -m venv CQA_venv
+        - CQA_venv\Scripts\activate
+        - pip install -r requirements.txt
+        - rename .env.example to .env and update the openai api key and SAVE
+        - streamlit run webapp_demo.py
+    
