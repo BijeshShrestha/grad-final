@@ -1,6 +1,8 @@
 import os
-import matplotlib.pyplot as plt
 from dotenv import load_dotenv
+import datetime
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
 # Import classes related to the agent setup
 from llama_index.llms.openai import OpenAI
@@ -14,7 +16,8 @@ from llama_index.core.tools import BaseTool, FunctionTool, QueryEngineTool, Tool
 from llama_index.core import VectorStoreIndex, StorageContext, SimpleDirectoryReader, load_index_from_storage
 from llama_index.core.objects import ObjectIndex
 
-from streamlit import pyplot as plt
+
+
 
 # Load environment variables
 load_dotenv()
@@ -22,7 +25,7 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
-
+# Define the bar chart creation tool
 def create_bar_chart(data, title="Bar Chart", x_label="X-axis", y_label="Y-axis", color="skyblue"):
     """
     Generates and saves a bar chart based on the provided data. The data can be a dictionary,
@@ -202,13 +205,6 @@ agent_worker = FunctionCallingAgentWorker.from_tools(
 )
 agent = AgentRunner(agent_worker)
 
-
-
-
-import datetime
-import os
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 
 def process_inquiry_and_show_latest_image(question):
     """

@@ -1,8 +1,7 @@
+from CQA import *
 
 import streamlit as st
 from streamlit import pyplot as plt
-from streamlit_pdf_viewer import pdf_viewer
-from CQA import *
 from llama_index.llms.openai import OpenAI
 from llama_index.core.agent import FunctionCallingAgentWorker, AgentRunner
 from PIL import Image

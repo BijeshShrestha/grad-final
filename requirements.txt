@@ -1,7 +1,6 @@
 streamlit
 llama_index
-streamlit-pdf-viewer
+llama-index-core
 matplotlib
 python-dotenv
-watchdog
-base64
+
