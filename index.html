@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧰  CQA Tools</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .menu { overflow: hidden; background-color: #792012; }
+  .menu a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
+  .dropdown { float: left; overflow: hidden; }
+  .dropdown .dropbtn { font-size: 16px; border: none; outline: none; color: white; padding: 14px 20px; background-color: inherit; font-family: inherit; margin: 0; cursor: pointer; }
+  .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+  .dropdown-content a { float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; cursor: pointer; }
+  .dropdown-content a:hover { background-color: #ddd; }
+  .dropdown:hover .dropdown-content { display: block; }
+  .content-section { display: none; }
+  .team-member { margin: 20px; text-align: center; }
+  .team-member img { width: 100px; height: auto; border-radius: 50%; }
+  .team-member p { margin-top: 5px; }
+
+  
+  .sub-section { margin-left: 20px; }
+  .sub-section h3 { font-size: 16px; }
+  .sub-section p, .sub-section ul { font-size: 15px; }
+
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+</style>
+<script>
+function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(sec) {
+        sec.style.display = 'none';
+    });
+
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+</script>
+</head>
+<body>
+
+<div class="menu">
+  <a href="#home" onclick="toggleSection('homeSection')">Home</a>
+  <a href="javascript:void(0);" onclick="toggleSection('teamSection')">Meet the Team</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="toggleSection('')">Project Details
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="javascript:void(0);" onclick="toggleSection('motivationSection')">Motivation</a>
+      <a href="javascript:void(0);" onclick="toggleSection('timelineSection')">Background</a>
+      <a href="javascript:void(0);" onclick="toggleSection('detailsSection')">Related Work</a>
+      <a href="javascript:void(0);" onclick="toggleSection('detailsSection2')">Our Contribution</a>
+      <a href="javascript:void(0);" onclick="toggleSection('motivationSection2')">Methodology</a>
+      <a href="javascript:void(0);" onclick="toggleSection('processBook')">Process Book</a>
+      <a href="javascript:void(0);" onclick="toggleSection('liveApp')">Live App</a>
+
+    </div>
+  </div> 
+</div>
+
+<div id="homeSection" class="content-section" style="display:block;">
+  <img src="img/wpi-logo.png" alt="WPI Logo" width="300" height="220">
+  <h1>CS573 - Data Visualization Group Project - Spring 2024</h1>
+  <h2>Leveraging AI and Vector Databases for User-Driven Document Analysis and Interactive Chart Transformations</h2>
+  <h4></h4>
+  <p>Utilizing large language models and query techniques with vector databases, 
+    this project offers a dynamic interface where users can interactively 
+    query and customize text and charts from uploaded documents, 
+    ensuring authoritative insights are directly derived and enhanced from the document's own data.
+  </p>
+  <img src="img/intro.gif" alt="Interactive Chart Transformation">
+</div>
+
+<div id="teamSection" class="content-section">
+  <h2>Our Team</h2>
+  <div class="team-member">
+    <img src="img/bijesh.png" alt="Bijesh">
+    <p><b>Bijesh Shrestha</b> is pursuing a PhD in Data Science focusing on Visualization research. He was an Army ROTC cadet at the University of Alaska Anchorage and native of Malangawa, Nepal.	</p>
+  </div>
+  <div class="team-member">
+    <img src="img/andrew.png" alt="Andrew">
+    <p><b>Andrew Kerekon</b> is enrolled in a BS/MS in Computer Science at Worcester Polytechnic Institute (WPI) with a passion for combining technology, biology, and mathematics to address real-world problems. 
+      Skilled in backend and frontend development, with particular interest in Java and React programming. 
+      Love for volunteerism and community service, and serve as Drupal web editor for Friends of Institute Park in Worcester, MA.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/aviv.png" alt="Aviv">
+    <p><b>Aviv Nur</b> is pursuing a Master of Science in Data Science at Worcester Polytechnic Institute (WPI), 
+      where he is learning advanced techniques and tools for data analysis, visualization, and modeling. 
+      His goal is to enhance his knowledge and competencies in data science, and to apply them to solve real-world problems in the field of statistics. 
+      He is passionate about using data to inform decision-making, support policy-making, and improve social welfare. 
+      He is eager to collaborate with other data professionals, researchers, and stakeholders, and to leverage his statistics expertise and experience.</p>
+  </div>
+</div>
+
+<!Sections for Project Details>
+<div id="motivationSection" class="content-section">
+  <h2>Motivation</h2>
+  <p>
+    The importance of efficiently extracting and interpreting information from documents featuring diverse chart types cannot be overstated, given the complex nature of these tasks and their dependency on a reader's prior knowledge and proficiency. Recognizing the challenges inherent in chart question and answer (CQA) systems, which must effectively synthesize textual and visual data to yield comprehensive insights, our project seeks to significantly advance this field.
+
+    Motivated by the ongoing research in this area and building upon existing studies that have explored the integration of Large Language Models (LLMs) and data synthesis techniques, our project introduces innovative methodologies for interacting with and extracting data from various chart formats, including SVGs embedded in PDFs and images uploaded by users. Despite the progress detailed in recent literature, current systems often fall short in terms of reliability, especially when relying on the generalized knowledge provided by LLMs.
+
+    Our project addresses these deficiencies by implementing a robust framework that combines a vector store database with advanced embedding techniques for semantic search, thereby enhancing the reliability and accuracy of the data retrieved. This integration not only improves the system's performance but also ensures that it can operate at scale, a crucial factor given the diverse and voluminous nature of chart data.
+
+    In summary, our contributions are aimed at refining the interaction between users and document-based chart data through sophisticated transformations and user-agent interfaces, enabling more precise and insightful analyses. This approach not only bridges the current gaps identified in the literature but also sets a new standard for reliability and functionality in CQA systems.
+  </p>
+      
+    
+</div>
+<div id="timelineSection" class="content-section">
+  <h2>Background</h2>
+  <p> Extracting and interpreting information from documents containing various charts often demands considerable time and 
+    relies significantly on a reader's prior knowledge and background. 
+    The state-of-the-art paper by [1] highlights the critical need for chart questions and answer (CQA) systems capable of synthesizing text 
+    and visuals for comprehensive insights, and provides problem space as shown in Figure 1.
+  </p>
+  <img src="img/figure1.png" alt="Chart Question Answering: State of the art and Future Directions" width="900" height="800">
+  <p><i>Figure 1: Chart Question Answering - State of the art and Future Directions [1].</i></p>
+  <p>
+    Various research is being done that attempts to fill this gap through the integration of LLM and techniques to synthesize texts 
+    and/or chart data that enable users to interact at various levels and depths. 
+    Recent papers include methodologies for extracting chart data from diverse sources such as embedded SVGs in PDFs, screenshots, 
+    and user uploaded images [2, 3, 4]. Chen et al. [5] worked on application design that integrates various APIs 
+    to ensure the right fine-tuned LLM is used for proper interpretation and insights drawn from those user-uploaded chart data 
+    However, we see some gaps in terms of the reliability of information that mostly comes from the LLM's general knowledge.
+  </p>
+      
+  <div><h2>References:</h2>
+    <ol>
+      <li>E. Hoque, P. Kavehzadeh, and A. Masry. Chart question answering: State of the art and future directions. In Computer Graphics Forum, vol- ume 41, pages 555-572. Wiley Online Library, 2022.</li> 
+      <br/>
+      <li>Y. Peng, S. Lin, Q. Chen, L. Xu, X. Ren, Y. Li, and J. Xu. Chatgraph: Chat with your graphs. arXiv preprint arXiv:2401.12672, 2024.</li>
+      <br/>
+      <li>Z. Wang, Y. Li, J. Wu, J. Soon, and X. Zhang. Finvis-gpt: A multimodal large language model for financial chart analysis. arXiv:2308.01430, 2023.</li>
+      <br/>
+      <li>Y. Han, C. Zhang, X. Chen, X. Yang, Z. Wang, G. Yu, B. Fu, and H. Zhang. Chartllama: A multimodal llm for chart understanding and generation. arXiv preprint arXiv:2311.16483, 2023.</li>  
+      <br/>
+      <li>W.G. Chen, I. Spiridonova, J. Yang, J. Gao, and C. Li. Llava-interactive: An all-in-one demo for image chat, segmentation, generation and editing. arXiv preprint arXiv:2311.00571, 2023.</li>  
+    </ol>   
+    
+    </div>
+  </div>
+<div id="detailsSection" class="content-section">
+  <h2>Related Work</h2>
+
+  <table border="1">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Hoque et al.[1]</td>
+            <td>State-of-the-art report on open research questions about answering user queries using chart visualizations combined with textual explanations to enhance understanding.</td>
+        </tr>
+        <tr>
+            <td>Chen et al.[2]</td>
+            <td>Demonstrates how LLaVA-interactive utilizes existing AI models for visual chat, image segmentation, and image generation/editing to support multimodal inputs and outputs without additional model training, enhancing user interaction through both language and visual prompts.</td>
+        </tr>
+        <tr>
+            <td>Han et al.[3]</td>
+            <td>Describes the generation of datasets and visualizations via GPT-4, utilized by ChartLlama, a fine-tuned LLaVA-1.5 model, for Q&A about the data, facilitating analysis and interpretation.</td>
+        </tr>
+        <tr>
+            <td>Masson et al.[4]</td>
+            <td>Introduces Charagraphs which incorporate dynamic, interactive charts and annotations directly into text, enhancing data interpretation and facilitating application in physical documents through OCR and augmented reality.</td>
+        </tr>
+        <tr>
+            <td>Ko et al.[5]</td>
+            <td>Proposes the VL2NL framework to create natural language datasets for data visualization, advancing NLI development by synthesizing chart semantics and improving accessibility and research flexibility.</td>
+        </tr>
+        <tr>
+            <td>Peng et al.[6]</td>
+            <td>Explores the use of domain-specific APIs to interpret chart data within context, allowing for interactive natural language analysis and modification of chart labels and data.</td>
+        </tr>
+        <tr>
+            <td>Wang et al.[7]</td>
+            <td>Develops LLM specifically for financial chart analysis via FinViz-GPT, achieving superior performance in chart description, finance-related Q&A, and market trend forecasting.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+  These studies connect how visualizations can be interpreted by LLMs to provide additional context to the user. However, they do not elaborate on how surrounding text can be utilized to provide further context to these visualizations. Our project aims to build on user queries to an LLM to combine text from uploaded documents to derive additional context for provided visualizations.
+</p>
+<h2>References:</h2>
+<ol>
+  <li>E. Hoque, P. Kavehzadeh, and A. Masry. Chart question answering: State of the art and future directions. In Computer Graphics Forum, vol- ume 41, pages 555-572. Wiley Online Library, 2022.</li> 
+  <br/>
+  <li>W.G. Chen, I. Spiridonova, J. Yang, J. Gao, and C. Li. Llava-interactive: An all-in-one demo for image chat, segmentation, generation and editing. arXiv preprint arXiv:2311.00571, 2023.</li>
+  <br/>
+  <li>Y. Han, C. Zhang, X. Chen, X. Yang, Z. Wang, G. Yu, B. Fu, and H. Zhang. Chartllama: A multimodal llm for chart understanding and generation. arXiv preprint arXiv:2311.16483, 2023.</li>
+  <br/>
+  <li>Masson et al. Charagraphs: Dynamic, interactive charts and annotations directly in text. arXiv preprint arXiv:2311.16483, 2023.</li>  
+  <br/>
+  <li>Ko et al. VL2NL: Creating natural language datasets for data visualization. arXiv preprint arXiv:2311.16483, 2023.</li>  
+  <br/>
+  <li>Peng et al. Chatgraph: Chat with your graphs. arXiv preprint arXiv:2401.12672, 2024.</li>  
+  <br/>
+  <li>Z. Wang, Y. Li, J. Wu, J. Soon, and X. Zhang. Finvis-gpt: A multimodal large language model for financial chart analysis. arXiv:2308.01430, 2023.</li>
+</ol>
+     
+</div>
+</div>
+<div id="detailsSection2" class="content-section">
+  <h2>Our Contribution</h2>
+  <p>
+    In this experiment, we make the following contributions:
+    <ol>
+      <li><b>Chart Transformation</b>: Allow user to request chart transformation to not only enhance understandings but also facilitate specific analytic needs.</li>
+      <br/>
+      <li>We develop an application that offers a dynamic interface for user interaction with text and charts in user-uploaded documents, enabling insightful queries and analysis.</li> 
+      <br/>
+      <li><b>Modification</b>: Through conversational user commands, enable precise modification of document content, including chart transformation and text rewriting. </li>
+      <br/>
+      <li><b>LLM and database</b>: Integration of large language models (LLMs) with vector database to ensure precise data retrieval from the document's own data, prompting reliability aka scalability</li> 
+    </ol>
+    
+  </p>
+
+  <h2>Impact</h2>
+  <p>This project harnesses the capabilities of Large Language Models (LLMs) alongside current and evolving techniques for data extraction and interaction, focusing on both textual and visual elements
+    in documents. It empowers users to explore, understand, and personalize text and graphics, thereby unlocking deeper insights.
+    <br/>
+    Moreover, the framework sets the foundation for broader applications, including integration with productivity tools, cross-linguistic functionalities, and beyond.
+  </p>
+
+</div>
+<!Sections for Project Details - Second Set>
+<div id="motivationSection2" class="content-section">
+  <h2>Methodology</h2>
+  <p>Our project based on the following pipeline. </p>
+  <img src="img/draft_pipeline.png" alt="Draft Pipeline" width="1000" height="250">
+  <p><i>Figure 2: Working Pipeline</i></p>
+  <p>Here is step-by-step the breakdown of this pipeline:</p>
+  <ol>
+    <li><b>Document Upload</b>: User uploads a document containing text and charts.</li>
+    <li><b>Text Extraction</b>: Text is extracted from the document, passed it to embedding, then stored it into vector database.</li>
+    <li><b>Chart Extraction</b>: Chart, in svg format, is extracted from the document and stored it into vector database.</li>
+    <li><b>Vector Database</b>: stored embedding representation of text and chart data that we can index</li>
+    <li><b>LLM Query Handler</b>: User queries are processed by the LLM to provide insights and answers and get the knowledge from vector database.</li>
+    <li><b>Context based answers about the chart</b>: User can do conversation in chatbot style to go deeper and granular about the chart.</li>
+    <li><b>Chart Transformation</b>: User can request changing the chart type into desirable chart for example bar to line, bar to pie if possible</li>
+    <li><b>Chart Statistics in verbose</b>: This component could be designed to generate detailed statistics about the chart, presenting them in a verbose (wordy or detailed) manner, possibly for comprehensive analysis or reporting..</li>
+
+  </ol>
+<h2>Techstack</h2>
+<p>Our project is built on the following techstack:</p>
+<ul>
+  <li>Python</li>
+  <li>Streamlit</li>
+  <li>llama_index</li>
+  <li>inkscape</li>
+  <li>GPT-4</li>
+</ul>
+<img src="img/techstack.png" alt="Techstack" width="700" height="200">
+</div>
+<div id="processBook" class="content-section">
+  <h2>Process Book</h2>
+  <p>Our process book is available at <a href="https://docs.google.com/document/d/1" target="_blank">this link</a>.</p>
+</div>
+<div id="liveApp" class="content-section">
+  <h2>Live App</h2>
+  <p>Go to this link</p>
+</div>
+<div style="height:2000px"></div> 
+
+<script>
+// Ensure the team section is hidden on page load
+document.querySelectorAll('.content-section').forEach(function(section) {
+  section.style.display = 'none';
+});
+document.getElementById('homeSection').style.display = 'block'; // Show the home section by default
+</script>
+
+</body>
+</html>
