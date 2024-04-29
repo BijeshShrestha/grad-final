@@ -1,0 +1,7 @@
+streamlit
+llama_index
+streamlit-pdf-viewer
+matplotlib
+python-dotenv
+watchdog
+base64

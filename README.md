@@ -1,5 +1,8 @@
 Final Project - Interactive Data Visualization Research  
 ===
+# Git repository, prospectus, storybook, and final project website 
+
+
 
 The key learning experience of this course is the final project. 
 You can design interactive visualization systems, develop visualization techniques for general data, or design a visualization related experiment.
