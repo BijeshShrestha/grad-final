@@ -26,7 +26,7 @@ Final Project - Interactive Data Visualization Research
 
 
 # Instruction to run the project locally
-    - Clone the repository from https://github.com/BijeshShrestha/grad-final
+    - Fork the repository from https://github.com/BijeshShrestha/grad-final
     - Navigate to the project directory
     - Run the following command to create a virtual environment
         **In Linux/Unix:**
