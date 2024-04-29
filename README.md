@@ -25,6 +25,10 @@ The project screen-cast is available at [📀 Youtube](https://www.youtube.com/w
 The project website is hosted at [▶️ Project Website](https://bijeshshrestha.github.io/grad-final/)
 
 
+### Chart Question Answering (CQA) Webapp
+
+The CQA tool can be found here at [▶ CQA webapp](https://cqa.shrestha.club/). If the tool is not working, please follow the instructions below to run the project locally. You will need to have the openai api key to run the project locally.
+
 # Instruction to run the project locally
     - Fork the repository from https://github.com/BijeshShrestha/grad-final
     - Navigate to the project directory
