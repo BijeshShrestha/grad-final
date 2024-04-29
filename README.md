@@ -4,8 +4,8 @@ Final Project - Interactive Data Visualization Research
 
 ### Git Repository: 
 
-    - https://github.com/BijeshShrestha/grad-final [Project Submission used for demo and user testing]
-    - https://github.com/BijeshShrestha/CQA_DataVis_Project [Working Repository: This repository is a working repository for the project and not clean.]
+- [Project Submission](https://github.com/BijeshShrestha/grad-final) used for demo and user testing
+- [Working Repository](https://github.com/BijeshShrestha/CQA_DataVis_Project): This repository is a working repository for the project and not clean
     
 ### Prospectus
 
@@ -17,12 +17,12 @@ Final Project - Interactive Data Visualization Research
 
 ### Project Screen-Cast
     
-        The project screen-cast is available at https://www.youtube.com/watch?v=d49uKRn23p0&t=291s 
+The project screen-cast is available at [📀 Youtube](https://www.youtube.com/watch?v=d49uKRn23p0)
 
 
 ### Project Website
 
-    The project website is hosted at https://bijeshshrestha.github.io/grad-final/
+The project website is hosted at [▶️ Project Website](https://bijeshshrestha.github.io/grad-final/)
 
 
 # Instruction to run the project locally
