@@ -28,6 +28,18 @@
   border: 1px solid black;
   border-collapse: collapse;
 }
+
+.pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 </style>
 
 </style>
@@ -61,7 +73,7 @@ function toggleSection(sectionId) {
       <a href="javascript:void(0);" onclick="toggleSection('detailsSection2')">Our Contribution</a>
       <a href="javascript:void(0);" onclick="toggleSection('motivationSection2')">Methodology</a>
       <a href="javascript:void(0);" onclick="toggleSection('processBook')">Process Book</a>
-      <a href="javascript:void(0);" onclick="toggleSection('liveApp')">Live App</a>
+      <a href="javascript:void(0);" onclick="toggleSection('demo')">Demo</a>
 
     </div>
   </div> 
@@ -85,7 +97,7 @@ function toggleSection(sectionId) {
   <h2>Our Team</h2>
   <div class="team-member">
     <img src="img/bijesh.png" alt="Bijesh">
-    <p><b>Bijesh Shrestha</b> is pursuing a PhD in Data Science focusing on Visualization research. He was an Army ROTC cadet at the University of Alaska Anchorage and native of Malangawa, Nepal.	</p>
+    <p><b>Bijesh Shrestha</b> is an active-duty Army officer currently pursuing a PhD in Data Science, with a focus on AI applications in data visualization, specifically aimed at enhancing collaboration and decision-making. In his leisure time, he enjoys engaging in outdoor activities such as fishing, hunting, hiking, and kayaking, alongside tackling various home improvement projects.</p>
   </div>
   <div class="team-member">
     <img src="img/andrew.png" alt="Andrew">
@@ -266,15 +278,23 @@ function toggleSection(sectionId) {
   <li>inkscape</li>
   <li>GPT-4</li>
 </ul>
-<img src="img/techstack.png" alt="Techstack" width="700" height="200">
+<img src="img/techstack.png" alt="Techstack" width="800" height="150">
 </div>
 <div id="processBook" class="content-section">
   <h2>Process Book</h2>
-  <p>Our process book is available at <a href="https://docs.google.com/document/d/1" target="_blank">this link</a>.</p>
+  <object class="pdf" 
+          data="./docs_deliverables/Prospectus_VIS_Group_Project_AI_Charts.pdf"
+          width="800"
+          height="500">
+  </object>
 </div>
-<div id="liveApp" class="content-section">
-  <h2>Live App</h2>
-  <p>Go to this link</p>
+<div id="demo" class="content-section">
+  <h2>Demo</h2>
+  <h3>See our demo in this video</h3>
+  <iframe width="420" height="315" src="https://www.youtube.com/watch?v=d49uKRn23p0">
+  </iframe>
+  <p>See our live app here: ➡️   <a href="https://demo.shrestha.club/">📊 CQA Tool</a> </p>
+
 </div>
 <div style="height:2000px"></div> 
 
